@@ -1,0 +1,83 @@
+/* Add this to your shared.css or a new CSS file */
+
+@font-face {
+    font-family: 'MedievalSharp';
+    src: url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+  }
+  
+  .font-medieval {
+    font-family: 'MedievalSharp', serif;
+  }
+  
+  .bg-green-700 {
+    background-color: #22543d; /* Darker green */
+  }
+  
+  .bg-red-700 {
+    background-color: #742a2a; /* Darker red */
+  }
+  
+  .border-green-500 {
+    border-color: #48bb78; /* Lighter green for border */
+  }
+  
+  .border-red-500 {
+    border-color: #f56565; /* Lighter red for border */
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .fixed {
+    position: fixed;
+  }
+  
+  .top-4 {
+    top: 40rem;
+  }
+  
+  .right-4 {
+    right: 13rem;
+  }
+  
+  .p-4 {
+    padding: 1rem;
+  }
+  
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  
+  .text-white {
+    color: #fff;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .mr-2 {
+    margin-right: 0.5rem;
+  }
+  
+  .absolute {
+    position: absolute;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .mt-2 {
+    margin-top: 0.5rem;
+  }
+  
+  .mr-2 {
+    margin-right: 0.5rem;
+  }
+  

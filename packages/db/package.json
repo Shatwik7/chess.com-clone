@@ -1,0 +1,21 @@
+{
+  "name": "@myorg/db",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "mongoose": "^6.13.0",
+    "typescript": "^5.5.4"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^22.5.0"
+  }
+}

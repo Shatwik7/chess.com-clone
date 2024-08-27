@@ -1,0 +1,76 @@
+/* Game.css */
+
+/* Background image and general styling */
+.medieval-background {
+  background-image: url('../assets/bg.png'); /* Background image path */
+  background-size: cover; /* Cover the entire element with the background image */
+  color: #fff; /* White text color */
+  font-family: 'MedievalSharp', cursive; /* Custom medieval font */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0; /* Remove any gap between elements */
+  min-height: 100vh;
+}
+
+#chessboard {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.medieval-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.medieval-button:hover {
+  background-color: #555;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.space-y-0 > * + * {
+  margin-top: 0;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+  .medieval-background {
+    flex-direction: row;
+  }
+
+  .w-1/4 {
+    width: 25%;
+  }
+}

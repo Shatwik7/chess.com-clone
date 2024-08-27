@@ -1,0 +1,77 @@
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    font-family: 'Garamond', serif; /* Medieval-style font */
+  }
+  
+  .bg-chess {
+    background-image: url('../assets/bg2.png'); /* Update this path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+  
+  .header, .footer {
+    background-color: #3a3a3a; /* Dark, stone-like color */
+    color: #f3f3f3; /* Light color for text */
+    font-family: 'Garamond', serif;
+    border-bottom: 4px solid #5c5c5c; /* Add some texture */
+  }
+  
+  .header a, .footer a {
+    color: #f3f3f3;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .header a:hover, .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .nav-list {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000; /* Add shadow to text */
+  }
+  
+  .main h2 {
+    font-size: 4rem; /* Larger, grand text */
+    margin-bottom: 1rem;
+  }
+  
+  .main p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .button {
+    background-color: #5a3a2f; /* Rich, medieval color */
+    color: #f3f3f3;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #7a4a3f; /* Slightly lighter on hover */
+  }
+  
+  .button + .button {
+    margin-top: 1rem; /* Space between buttons */
+  }
+  

@@ -1,0 +1,48 @@
+.player-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    border-radius: 8px;
+    width: 100%; /* Adjusted width to make it smaller */
+    margin: px; /* Center horizontally */
+}
+
+.player-info-left,
+.player-info-right {
+    display: flex;
+    align-items: center;
+}
+
+.player-info-left {
+    flex: 1;
+}
+
+.player-info-right {
+    flex: 2;
+    justify-content: flex-end;
+}
+
+.player-avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.player-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.player-rating,
+.player-score {
+    color: #ccc;
+    font-size: 14px;
+}
