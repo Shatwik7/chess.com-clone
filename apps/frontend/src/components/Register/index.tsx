@@ -15,14 +15,14 @@ const Register: React.FC<{ open: boolean; onClose: () => void }> = ({ open, onCl
   const [isLogin, setIsLogin] = useState(true);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
+  const [email,setEmail]=useState('');
   const handleFormSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     try {
       const url = isLogin ? 'http://localhost:3000/login' : 'http://localhost:3000/register';
       const response = await axios.post(
         url,
-        { username, password },
+        { username, password ,email},
         { withCredentials: true }
       );
       Cookies.set('userToken', response.data.userToken, { expires: 1 });
@@ -51,6 +51,16 @@ const Register: React.FC<{ open: boolean; onClose: () => void }> = ({ open, onCl
             onChange={(e) => setUsername(e.target.value)}
             required
           />
+         {!isLogin ?( <TextField
+          label='email'
+          type='email'
+          variant="outlined"
+          fullWidth
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          />):''}
+          
           <TextField
             label="Password"
             type="password"
