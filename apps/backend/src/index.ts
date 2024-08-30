@@ -1,11 +1,8 @@
 
 import express, { NextFunction, Request, Response } from 'express';
 import session from 'express-session';
-import bcrypt from 'bcrypt';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import { v4 as uuidv4 } from 'uuid';
-import { connectToDatabase, UserModel, GameModel, MoveModel, NotificationModel } from '@myorg/db';
 import ExpressError from './utils/expressError';
 import { initializeDatabase } from './initDb';
 import redis from './redisClient';
@@ -23,7 +20,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors({
-  origin:  ['http://localhost:4173', 'http://localhost:5173'], // Adjust to match your frontend URL
+  origin:  ['http://localhost:4173', 'http://localhost:5173'],
   credentials: true
 }));
 
