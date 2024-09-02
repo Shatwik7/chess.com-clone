@@ -3,13 +3,13 @@ import { INIT_GAME, MOVE, RESIGN_GAME, GAME_OVER, SENDMOVE, GAME_RECONNCETED, ME
 import { Game } from "./Game";
 import Redis from "ioredis";
 import { WebSocket } from "ws";
-import { ConnectionStates } from "mongoose";
+import { connectToDatabase ,GameModel,UserModel,MoveModel } from "@myorg/db";
 
 
 // always assume that game is in blackPlayer|player2's first server
 // any message by white player will be transmitted to blackplayer's server via pub sub
 // when reconnection happens black player will make a new game instance and white player will only get a cache of game object
-
+connectToDatabase('mongodb://localhost:27017/testChess');
 const pub = new Redis({
     port: 6379,
     host: "127.0.0.1",

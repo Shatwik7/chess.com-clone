@@ -1,20 +1,22 @@
 // src/models/moveModel.ts
 
 import mongoose, { Schema, Document } from 'mongoose';
+import { Game } from './gameModel';
+import { User } from './userModel';
 
 interface Move extends Document {
-  moveId: string;
-  gameId: string;
-  playerId: string;
-  move: string;
-  timestamp: Date; 
+  game:Game
+  player: User;
+  to:string;
+  from:string;
+  timestamp: Date;
 }
 
 const moveSchema = new Schema<Move>({
-  moveId: { type: String, required: true, unique: true },
-  gameId: { type: String, required: true },
-  playerId: { type: String, required: true },
-  move: { type: String, required: true },
+  game: { type: Schema.Types.ObjectId, required: true ,ref: 'Game'},
+  player: {type: Schema.Types.ObjectId, required: true ,ref: 'User' },
+  to: { type: String, required: true },
+  from: { type: String, required: true },
   timestamp: { type: Date, default: Date.now },
 });
 

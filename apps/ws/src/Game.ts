@@ -18,6 +18,7 @@ export class Game  extends EventEmitter  {
     private startTime: Date;
     private endTime:Date|null;
     private timer: NodeJS.Timeout | null;
+    private gameTime:number;
     private player1Time: number;
     private player2Time: number;
     private currentPlayer: string;
@@ -33,7 +34,8 @@ export class Game  extends EventEmitter  {
         this.endTime = null;
         this.result="process";
         this.timer=null;
-        this.player1Time = timeLimit * 60 * 1000; // 10 minutes in milliseconds
+        this.gameTime=timeLimit*60;
+        this.player1Time = timeLimit * 60 * 1000;
         this.player2Time = timeLimit * 60 * 1000;
         this.moves=moves?[...moves]:[];
         this.currentPlayer = player1;
@@ -191,7 +193,7 @@ export class Game  extends EventEmitter  {
             console.error(e);
             return false;
         }
-
+        
         console.log('\x1b[35m move made in game.ts\x1b[37m');
 
         // Switch the timer to the other player
